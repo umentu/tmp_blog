@@ -44,14 +44,11 @@ if __name__ == '__main__':
          bookmark_count, 
          last_post) 
          VALUES ( 
-        'test_channel', 
-        'test_word', 
-        100, 
-        '2000-01-01T00:00:00+09:00'
+         ?,?,?,?
     );
     """
 
-    cursor.execute(sql)
+    cursor.execute(sql,('test_channel', 'test_word', 100, '2000-01-01T00:00:00+09:00')
 
     # テストデータ確認
 
